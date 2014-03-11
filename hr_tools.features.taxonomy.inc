@@ -9,10 +9,10 @@
  */
 function hr_tools_taxonomy_default_vocabularies() {
   return array(
-    'hr_tool_type' => array(
-      'name' => 'Tool type',
-      'machine_name' => 'hr_tool_type',
-      'description' => 'Type of tool',
+    'hr_toolbox_category' => array(
+      'name' => 'Toolbox Category',
+      'machine_name' => 'hr_toolbox_category',
+      'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

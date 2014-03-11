@@ -10,9 +10,9 @@
 function hr_tools_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-hr_tool-body'
-  $field_instances['node-hr_tool-body'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-body'
+  $field_instances['node-hr_toolbox_item-body'] = array(
+    'bundle' => 'hr_toolbox_item',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -57,13 +57,13 @@ function hr_tools_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-hr_tool-field_files'
-  $field_instances['node-hr_tool-field_files'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-field_files'
+  $field_instances['node-hr_toolbox_item-field_files'] = array(
+    'bundle' => 'hr_toolbox_item',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -72,7 +72,7 @@ function hr_tools_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -89,13 +89,13 @@ function hr_tools_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_files',
-    'label' => 'Attached Files',
+    'label' => 'Files',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'entity_translation_sync' => FALSE,
-      'file_directory' => 'tools/files',
-      'file_extensions' => 'pdf txt doc docx xls xlsx odt ods',
+      'file_directory' => 'toolbox/files',
+      'file_extensions' => 'pdf doc docx xls xlsx ppt pptx odt ods odp zip gz jpg jpeg png',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -110,10 +110,10 @@ function hr_tools_field_default_field_instances() {
           'youtube' => 0,
         ),
         'allowed_types' => array(
-          'audio' => 0,
+          'audio' => 'audio',
           'document' => 'document',
-          'image' => 0,
-          'video' => 0,
+          'image' => 'image',
+          'video' => 'video',
         ),
         'browser_plugins' => array(
           'media_default--media_browser_1' => 0,
@@ -125,13 +125,13 @@ function hr_tools_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-hr_tool-field_links'
-  $field_instances['node-hr_tool-field_links'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-field_links'
+  $field_instances['node-hr_toolbox_item-field_links'] = array(
+    'bundle' => 'hr_toolbox_item',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -141,7 +141,7 @@ function hr_tools_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -190,13 +190,13 @@ function hr_tools_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-hr_tool-field_tool_type'
-  $field_instances['node-hr_tool-field_tool_type'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-field_toolbox_categories'
+  $field_instances['node-hr_toolbox_item-field_toolbox_categories'] = array(
+    'bundle' => 'hr_toolbox_item',
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
@@ -209,7 +209,7 @@ function hr_tools_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -225,8 +225,8 @@ function hr_tools_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tool_type',
-    'label' => 'Type',
+    'field_name' => 'field_toolbox_categories',
+    'label' => 'Categories',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -251,11 +251,56 @@ function hr_tools_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-hr_tool-og_group_ref'
-  $field_instances['node-hr_tool-og_group_ref'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-field_toolbox_item_type'
+  $field_instances['node-hr_toolbox_item-field_toolbox_item_type'] = array(
+    'bundle' => 'hr_toolbox_item',
     'default_value' => NULL,
-    'default_value_function' => 'entityreference_prepopulate_field_default_value',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_toolbox_item_type',
+    'label' => 'Type',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-hr_toolbox_item-og_group_ref'
+  $field_instances['node-hr_toolbox_item-og_group_ref'] = array(
+    'bundle' => 'hr_toolbox_item',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -282,7 +327,7 @@ function hr_tools_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Groups audience',
-    'required' => 0,
+    'required' => FALSE,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -293,14 +338,6 @@ function hr_tools_field_default_field_instances() {
             'widget_type' => 'options_select',
           ),
           'status' => TRUE,
-        ),
-        'prepopulate' => array(
-          'action' => 'hide',
-          'action_on_edit' => 1,
-          'fallback' => 'none',
-          'og_context' => 0,
-          'skip_perm' => 0,
-          'status' => 1,
         ),
       ),
       'entity_translation_sync' => FALSE,
@@ -319,17 +356,16 @@ function hr_tools_field_default_field_instances() {
       ),
     ),
     'widget' => array(
-      'active' => 0,
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-hr_tool-title_field'
-  $field_instances['node-hr_tool-title_field'] = array(
-    'bundle' => 'hr_tool',
+  // Exported field_instance: 'node-hr_toolbox_item-title_field'
+  $field_instances['node-hr_toolbox_item-title_field'] = array(
+    'bundle' => 'hr_toolbox_item',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -338,7 +374,7 @@ function hr_tools_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -376,9 +412,9 @@ function hr_tools_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-hr_tool_type-name_field'
-  $field_instances['taxonomy_term-hr_tool_type-name_field'] = array(
-    'bundle' => 'hr_tool_type',
+  // Exported field_instance: 'taxonomy_term-hr_toolbox_category-name_field'
+  $field_instances['taxonomy_term-hr_toolbox_category-name_field'] = array(
+    'bundle' => 'hr_toolbox_category',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -415,8 +451,9 @@ function hr_tools_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attached Files');
   t('Body');
+  t('Categories');
+  t('Files');
   t('Groups audience');
   t('Links');
   t('Name');

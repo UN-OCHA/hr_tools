@@ -10,13 +10,13 @@
 function hr_tools_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_tool_type'
-  $field_bases['field_tool_type'] = array(
+  // Exported field_base: 'field_toolbox_categories'
+  $field_bases['field_toolbox_categories'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_tool_type',
+    'field_name' => 'field_toolbox_categories',
     'foreign keys' => array(
       'taxonomy_term_data' => array(
         'columns' => array(
@@ -45,7 +45,7 @@ function hr_tools_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'hr_tool_type' => 'hr_tool_type',
+          'hr_toolbox_category' => 'hr_toolbox_category',
         ),
       ),
       'profile2_private' => FALSE,
@@ -53,6 +53,36 @@ function hr_tools_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_toolbox_item_type'
+  $field_bases['field_toolbox_item_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_toolbox_item_type',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'introduction' => 'Introduction',
+        'tool' => 'Tool',
+        'example' => 'Example',
+        'link' => 'Link',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   return $field_bases;
