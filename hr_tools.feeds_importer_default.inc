@@ -36,33 +36,35 @@ function hr_tools_feeds_importer_default() {
       ),
     ),
     'processor' => array(
-      'plugin_key' => 'FeedsTermProcessor',
+      'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'vocabulary' => 0,
+        'expire' => '-1',
+        'author' => 0,
+        'authorize' => 1,
         'mappings' => array(
           0 => array(
             'source' => 'Name:en',
-            'target' => 'name',
+            'target' => 'title',
             'unique' => 1,
           ),
           1 => array(
             'source' => 'Name:en',
-            'target' => 'name_field:et:en',
+            'target' => 'title_field:et:en',
             'unique' => FALSE,
           ),
           2 => array(
             'source' => 'Name:fr',
-            'target' => 'name_field:et:fr',
+            'target' => 'title_field:et:fr',
             'unique' => FALSE,
           ),
           3 => array(
             'source' => 'Name:es',
-            'target' => 'name_field:et:es',
+            'target' => 'title_field:et:es',
             'unique' => FALSE,
           ),
           4 => array(
-            'source' => 'Parent',
-            'target' => 'parent',
+            'source' => 'Space',
+            'target' => 'og_group_ref:label',
             'unique' => FALSE,
           ),
         ),

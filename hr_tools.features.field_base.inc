@@ -18,11 +18,11 @@ function hr_tools_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_toolbox_categories',
     'foreign keys' => array(
-      'taxonomy_term_data' => array(
+      'node' => array(
         'columns' => array(
-          'target_id' => 'tid',
+          'target_id' => 'nid',
         ),
-        'table' => 'taxonomy_term_data',
+        'table' => 'node',
       ),
     ),
     'indexes' => array(
@@ -49,7 +49,7 @@ function hr_tools_field_default_field_bases() {
         ),
       ),
       'profile2_private' => FALSE,
-      'target_type' => 'taxonomy_term',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
