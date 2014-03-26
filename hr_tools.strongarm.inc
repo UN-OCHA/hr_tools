@@ -165,7 +165,7 @@ function hr_tools_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_hr_toolbox_item_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:og-group-ref:url:path]/toolbox-item/[node:title]';
   $export['pathauto_node_hr_toolbox_item_pattern'] = $strongarm;
 
   return $export;
