@@ -30,7 +30,21 @@ function hr_tools_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_toolbox_cat_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['id'] = 'field_toolbox_cat_type';
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['table'] = 'field_data_field_toolbox_cat_type';
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['field'] = 'field_toolbox_cat_type';
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['label'] = '';
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_toolbox_cat_type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';

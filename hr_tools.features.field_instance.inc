@@ -10,6 +10,52 @@
 function hr_tools_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-hr_toolbox_category-field_toolbox_cat_type'
+  $field_instances['node-hr_toolbox_category-field_toolbox_cat_type'] = array(
+    'bundle' => 'hr_toolbox_category',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_toolbox_cat_type',
+    'label' => 'Type',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-hr_toolbox_category-og_group_ref'
   $field_instances['node-hr_toolbox_category-og_group_ref'] = array(
     'bundle' => 'hr_toolbox_category',
@@ -82,7 +128,7 @@ function hr_tools_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
@@ -131,7 +177,7 @@ function hr_tools_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
