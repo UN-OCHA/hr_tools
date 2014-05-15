@@ -72,9 +72,9 @@ function hr_tools_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'introduction' => 'Introduction',
-        'tool' => 'Tool',
-        'example' => 'Example',
+        'introduction' => 'Guidance',
+        'tool' => 'Tools',
+        'example' => 'Examples',
         'link' => 'Link',
       ),
       'allowed_values_function' => '',
