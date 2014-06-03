@@ -103,7 +103,7 @@ function hr_tools_field_default_field_bases() {
         'introduction' => 'Guidance',
         'tool' => 'Tools',
         'example' => 'Examples',
-        'link' => 'Link',
+        'link' => 'Links',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,

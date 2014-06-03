@@ -35,6 +35,7 @@ features[field_instance][] = node-hr_toolbox_category-og_group_ref
 features[field_instance][] = node-hr_toolbox_category-title_field
 features[field_instance][] = node-hr_toolbox_item-body
 features[field_instance][] = node-hr_toolbox_item-field_files
+features[field_instance][] = node-hr_toolbox_item-field_image
 features[field_instance][] = node-hr_toolbox_item-field_links
 features[field_instance][] = node-hr_toolbox_item-field_toolbox_categories
 features[field_instance][] = node-hr_toolbox_item-field_toolbox_item_type

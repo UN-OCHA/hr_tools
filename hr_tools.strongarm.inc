@@ -42,13 +42,13 @@ function hr_tools_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'language' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
       ),
       'display' => array(),
