@@ -213,6 +213,9 @@ function hr_tools_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'strong';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -223,7 +226,7 @@ function hr_tools_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Image */
+  /* Field: Content: Icon */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -242,21 +245,23 @@ function hr_tools_views_default_views() {
   $handler->display->display_options['fields']['field_files']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_files']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_files']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_files']['type'] = 'file_download_link';
   $handler->display->display_options['fields']['field_files']['settings'] = array(
-    'file_view_mode' => 'default',
+    'text' => '[file:name]',
   );
-  $handler->display->display_options['fields']['field_files']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_files']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_files']['multi_type'] = 'ul';
   /* Field: Content: Links */
   $handler->display->display_options['fields']['field_links']['id'] = 'field_links';
   $handler->display->display_options['fields']['field_links']['table'] = 'field_data_field_links';
   $handler->display->display_options['fields']['field_links']['field'] = 'field_links';
-  $handler->display->display_options['fields']['field_links']['label'] = 'Link(s)';
+  $handler->display->display_options['fields']['field_links']['label'] = '';
   $handler->display->display_options['fields']['field_links']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_links']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_links']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_links']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_links']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_links']['multi_type'] = 'ul';
   $handler->display->display_options['pane_category']['name'] = 'Toolbox';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
@@ -281,7 +286,6 @@ function hr_tools_views_default_views() {
     t('Links'),
     t('All'),
     t('Toolbox items'),
-    t('Link(s)'),
     t('Toolbox'),
   );
   $export['hr_toolbox_panes'] = $view;
