@@ -155,7 +155,6 @@ function hr_tools_views_default_views() {
   $handler->display->display_options['fields']['field_files']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_files']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_files']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_files']['type'] = 'file_download_link';
   $handler->display->display_options['fields']['field_files']['settings'] = array(
     'text' => '[file:name]',
   );
