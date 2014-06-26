@@ -59,7 +59,6 @@ features[variable][] = node_submitted_hr_toolbox_item
 features[variable][] = panelizer_defaults_node_hr_toolbox_category
 features[variable][] = pathauto_node_hr_toolbox_category_pattern
 features[variable][] = pathauto_node_hr_toolbox_item_pattern
-features[views_view][] = hr_toolbox_categories
 features[views_view][] = hr_toolbox_panes
 features_exclude[dependencies][list] = list
 features_exclude[dependencies][panelizer] = panelizer
